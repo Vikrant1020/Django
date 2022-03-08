@@ -4,7 +4,7 @@ phases:
     runtime-versions:
       Python: 3.10.2
       pip: 21.2.4
-      Django: 4.0.3
+      
     commands:
       - echo Installing
   pre_build:
