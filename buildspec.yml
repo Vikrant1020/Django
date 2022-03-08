@@ -10,7 +10,7 @@ phases:
     commands:
       - echo Installing source PYTHON dependencies.
       - apt-get install python3.10
-      - aptinstall python3-pip
+      - apt install python3-pip
       - pip install django
   build:
     commands:
