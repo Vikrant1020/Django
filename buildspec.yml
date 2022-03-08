@@ -1,12 +1,6 @@
 version: 0.2
 phases:
-  install:
-    runtime-versions:
-      Python: 3.10.2
-      pip: 21.2.4
-      Django: 4.0.3
-    commands:
-      - echo Installing
+ 
   pre_build:
     commands:
       - echo Installing source NPM dependencies.
