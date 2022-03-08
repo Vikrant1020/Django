@@ -1,0 +1,26 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      Python: 3.10.2
+      pip: 21.2.4
+      Django: 4.0.3
+    commands:
+      - echo Installing
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies.
+      - apt-get install python3.10
+      - apt-get install python3-pip
+      - pip install django
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+      - python manage.py runserver
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'
