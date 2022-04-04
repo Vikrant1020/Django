@@ -14,7 +14,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - python3 manage.py runserver --noinput
+     # - python3 manage.py runserver --noinput
   post_build:
     commands:
       - echo Build completed on `date`
