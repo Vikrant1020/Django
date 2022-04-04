@@ -11,7 +11,7 @@ phases:
       - echo Installing source PYTHON dependencies.
       - apt-get install python3.10
       - pip install django
-  post_build:
-    commands:
-      - echo Build started on `date`
-      - python3 manage.py runserver --noreload
+#  post_build:
+ #   commands:
+ #3     - echo Build started on `date`
+ #     - python3 manage.py runserver --noreload
