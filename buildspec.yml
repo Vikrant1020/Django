@@ -14,4 +14,4 @@ phases:
   post_build:
     commands:
       - echo Build started on `date`
-      - python3 manage.py runserver --nothreading
+      - python3 manage.py runserver --noreload
