@@ -88,7 +88,7 @@ def ok(request):
 
 
 def html(request):
-	return render(request,'html.html')
+	return render(request,'index.html')
 
 def word(request):	
 	return render(request,'word.html')
