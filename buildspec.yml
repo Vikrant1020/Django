@@ -3,12 +3,8 @@ phases:
   install:
     runtime-versions:
       python: 3.9
-     
-    commands:
-      - echo Installing
   pre_build:
     commands:
-      - echo Installing source PYTHON dependencies.
       - apt-get install python3.10
       - pip install django
   build:
