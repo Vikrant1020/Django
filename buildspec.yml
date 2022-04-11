@@ -17,7 +17,7 @@ phases:
       - echo Build completed on `date`
 #      - python3 manage.py runserver 0.0.0.0:8000
     finally:
-      - python3 manage.py test
+      - python3 manage.py runserver 0.0.0.0:8090 & sleep 30
       
 artifacts:
   files:
