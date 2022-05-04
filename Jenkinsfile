@@ -5,8 +5,8 @@ pipeline {
         stage('kjhgf') {
             steps {
                 echo 'Hello World'
-                sh 'sudo apt install pytohn -y'
-                sh 'sudo apt install pytohn3-pip -y'
+                sh 'sudo apt install python -y'
+                sh 'sudo apt install python3-pip -y'
                 sh 'pip intsall djnago'
                 sh 'python manage.py runserver & '
             }
