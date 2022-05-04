@@ -7,7 +7,7 @@ pipeline {
                 echo 'Hello World'
                 sh 'sudo apt install python -y'
                 sh 'sudo apt install python3-pip -y'
-                sh 'pip intsall djnago'
+                sh 'pip install djnago'
                 sh 'python manage.py runserver & '
             }
         }
