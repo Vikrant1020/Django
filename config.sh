@@ -24,10 +24,31 @@ ExecStart=/home/ubuntu/env/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
-          textutils.wsgi:application
+          first.wsgi:application
 
 [Install]
 WantedBy=multi-user.target"  >  /etc/systemd/system/gunicorn.service
+
+
+
+echo "server {
+    listen 80;
+    server_name 35.76.122.109;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/ubuntu/;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}" > /etc/nginx/sites-available/first
+
+
+sudo ln -s /etc/nginx/sites-available/first /etc/nginx/sites-enabled/
+
 
 sudo systemctl restart nginx
 sudo systemctl restart gunicorn
