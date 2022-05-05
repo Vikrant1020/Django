@@ -30,6 +30,9 @@ ExecStart=/home/ubuntu/env/bin/gunicorn \
 [Install]
 WantedBy=multi-user.target"  >  /etc/systemd/system/gunicorn.service
 
+sudo systemctl start gunicorn.socket
+
+sudo systemctl enable gunicorn.socket
 
 
 echo "server {
