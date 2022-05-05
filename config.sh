@@ -1,5 +1,6 @@
 #!/bin/bash 
 
+deactivate
 
 echo "[Unit]
 Description=gunicorn socket
