@@ -55,5 +55,5 @@ sudo ln -s /etc/nginx/sites-available/first /etc/nginx/sites-enabled/
 
 sudo rm /etc/nginx//sites-enabled/default
 
-
+sudo systemctl restart nginx
 
