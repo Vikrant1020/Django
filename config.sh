@@ -1,5 +1,6 @@
 #!/bin/bash 
 
+cd /home/ubuntu
 gunicorn --bind 0.0.0.0:8000 first.wsgi & 
 
 echo "server {
