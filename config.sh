@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-pip install -r req
+pip install -r requirements.txt
 deactivate
 
 echo "[Unit]
