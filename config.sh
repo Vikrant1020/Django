@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-gunicorn --bind 0.0.0.0:8000 first.wsgi &
+gunicorn --bind 0.0.0.0:8000 first.wsgi > /dev/null 2>&1 & 
 
 echo "server {
           listen 80;
