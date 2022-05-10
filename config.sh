@@ -7,14 +7,14 @@ gunicorn --bind 0.0.0.0:8000 first.wsgi &
 
 echo "server {
           listen 80;
-          server_name 18.183.2.22;
+          server_name 18.183.88.141;
 
           location /static/ {
                     root /home/ubuntu/static/;
           }        
 
           location / {
-          proxy_pass http://18.183.2.22:8000;
+          proxy_pass http://18.183.88.141:8000;
           }
 }" > /etc/nginx/sites-available/first
 
