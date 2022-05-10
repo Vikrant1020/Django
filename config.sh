@@ -1,5 +1,6 @@
 #!/bin/bash 
 
+pip install -r req
 deactivate
 
 echo "[Unit]
