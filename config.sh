@@ -5,7 +5,7 @@ cd /home/ubuntu
 source env/bin/activate
 sudo fuser -k 8000/tcp
 
-gunicorn --bind 0.0.0.0:8000 first.wsgi &  
+gunicorn --bind 0.0.0.0:8000 first.wsgi &>/dev/null & 
 
 echo "server {
           listen 80;
