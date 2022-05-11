@@ -4,11 +4,11 @@ cd /home/ubuntu
 
 source env/bin/activate
 
-gunicorn --bind 18.183.88.141:8000 first.wsgi &  
+gunicorn --bind 0.0.0.0:8000 first.wsgi &  
 
 echo "server {
           listen 80;
-          server_name  18.183.88.141;
+          server_name 18.183.88.141;
 
           location /static/ {
                     root /home/ubuntu/static/;
