@@ -4,7 +4,7 @@ cd /home/ubuntu
 
 source env/bin/activate
 
-gunicorn --bind http://seasiadevops.co.vu/ first.wsgi &  
+gunicorn --bind seasiadevops.co.vu:8000 first.wsgi &  
 
 echo "server {
           listen 80;
