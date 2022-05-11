@@ -11,7 +11,7 @@ mv /home/ubuntu/NGINX /etc/nginx/sites-available
 
 sudo ln -s /etc/nginx/sites-available/NGINX /etc/nginx/sites-enabled/
 
-sudo rm /etc/nginx//sites-enabled/defalut
+sudo rm /etc/nginx//sites-enabled/default
 
 sudo systemctl restart nginx
 
