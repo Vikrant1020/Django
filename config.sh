@@ -7,23 +7,11 @@ sudo fuser -k 8000/tcp
 
 gunicorn --bind 0.0.0.0:8000 first.wsgi &>/dev/null & 
 
-echo "server {
-          listen 80;
-          server_name seasiadevops.co.vu;
+mv /home/ubuntu/NGINX /etc/nginx/sites-available 
 
-          location /static/ {
-                    root /home/ubuntu/static/;
-          }        
+sudo ln -s /etc/nginx/sites-available/NGINX /etc/nginx/sites-enabled/
 
-          location / {
-          proxy_pass http://35.78.236.153:8000;
-          }
-}" > /etc/nginx/sites-available/first
-
-
-sudo ln -s /etc/nginx/sites-available/first /etc/nginx/sites-enabled/
-
-sudo rm /etc/nginx//sites-enabled/default
+sudo rm /etc/nginx//sites-enabled/first
 
 sudo systemctl restart nginx
 
