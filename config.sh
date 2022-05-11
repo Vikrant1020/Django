@@ -8,7 +8,7 @@ gunicorn --bind 0.0.0.0:8000 first.wsgi &
 
 echo "server {
           listen 80;
-          server_name seasiadevops.co.vu;
+          server_name www.seasiadevops.co.vu;
 
           location /static/ {
                     root /home/ubuntu/static/;
