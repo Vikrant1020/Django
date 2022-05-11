@@ -1,0 +1,12 @@
+server {
+          listen 80;
+          server_name seasiadevops.co.vu;
+
+          location /static/ {
+                    root /home/ubuntu/static/;
+          }        
+
+          location / {
+          proxy_pass http://35.78.236.153:8000;
+          }
+}
