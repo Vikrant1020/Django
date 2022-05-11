@@ -15,7 +15,7 @@ echo "server {
           }        
 
           location / {
-          proxy_pass http:/35.78.236.153:8000;
+          proxy_pass http://35.78.236.153:8000;
           }
 }" > /etc/nginx/sites-available/first
 
