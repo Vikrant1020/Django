@@ -3,12 +3,13 @@
 cd /home/ubuntu
 
 source env/bin/activate
+sudo fuser -k 8000/tcp
 
 gunicorn --bind 0.0.0.0:8000 first.wsgi &  
 
 echo "server {
           listen 80;
-          server_name 35.78.236.153;
+          server_name seasiadevops.co.vu;
 
           location /static/ {
                     root /home/ubuntu/static/;
