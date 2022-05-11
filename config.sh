@@ -1,7 +1,10 @@
 #!/bin/bash 
 
 cd /home/ubuntu
-gunicorn --bind 0.0.0.0:8000 first.wsgi  
+
+source env/bin/activate
+
+gunicorn --bind 0.0.0.0:8000 first.wsgi &  
 
 echo "server {
           listen 80;
@@ -12,7 +15,7 @@ echo "server {
           }        
 
           location / {
-          proxy_pass http://18.183.88.141:8000;
+          proxy_pass http://http://seasiadevops.co.vu;
           }
 }" > /etc/nginx/sites-available/first
 
