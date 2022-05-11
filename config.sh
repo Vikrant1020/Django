@@ -4,18 +4,18 @@ cd /home/ubuntu
 
 source env/bin/activate
 
-gunicorn --bind localhost:8000 first.wsgi &  
+gunicorn --bind 18.183.88.141:8000 first.wsgi &  
 
 echo "server {
           listen 80;
-          server_name  localhost;
+          server_name  18.183.88.141;
 
           location /static/ {
                     root /home/ubuntu/static/;
           }        
 
           location / {
-          proxy_pass http:/loaclhost:8000;
+          proxy_pass http:/18.183.88.141:8000;
           }
 }" > /etc/nginx/sites-available/first
 
