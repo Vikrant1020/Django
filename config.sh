@@ -7,6 +7,11 @@ sudo fuser -k 8000/tcp
 
 gunicorn --bind 0.0.0.0:8000 first.wsgi &>/dev/null & 
 
+# mv /home/ubuntu/gunicorn.socket /etc/systemd/system/
+# mv /home/ubuntu/gunicorn.service /etc/systemd/system/
+
+# sudo systemctl start gunicorn.socket
+# sudo systemctl enable gunicorn.socket
 
 mv /home/ubuntu/NGINX /etc/nginx/sites-available 
 
