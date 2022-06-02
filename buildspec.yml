@@ -6,7 +6,7 @@ phases:
   pre_build:
     commands:
       - apt-get install python3.10
-      - pip install -r requriment.txt
+      - pip install -r requriments.txt
       #- apt-get install screen
      
   build:
