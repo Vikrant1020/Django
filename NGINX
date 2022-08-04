@@ -1,6 +1,6 @@
 server {
           listen 80;
-          server_name seasiadevops.co.vu;
+          server_name localhost:80;
 
           location /static/ {
                     root /home/ubuntu/static/;
