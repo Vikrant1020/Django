@@ -13,7 +13,7 @@ phases:
     commands:
       - echo Build started on `date`
       #- django-admin runserver 
-  post_build:
+  post_build: ##
     commands:
       - echo Build completed on `date`
 #      - python3 manage.py runserver 0.0.0.0:8000
